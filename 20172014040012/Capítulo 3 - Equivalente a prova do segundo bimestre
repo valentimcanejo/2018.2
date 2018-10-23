@@ -1,0 +1,44 @@
+Aluno: Rômulo Valentim
+Matrícula: 20172014040012
+
+
+1 - A) não bloqueante, aumenta a interatividade, porém aumenta a complexidade
+bloqueante possui interface, porém ainda é preciso renderizar.
+B)
+Buferring (buferização) torna a comunicação mais rápida que o consumo de dados, transmissão continua entre emissor e receptor.
+maior complexidade, administração de fila
+C)
+mensagem ou por fluxo = pode ser de tamanho fixo ou variável, principal característica é a questão de um fluxo continuo informações
+mensagem = Dividir o arquivo em blocos (pequenas partes) /pacotes
+fluxo de dados = permitir uma geração e um consumo continuo. (Ex: USB/vídeos)
+D)
+tamanho fixo ou variável = configurar o tamanho da mensagem a qual será transmitida, perda de flexibilidade
+E)
+1:1= Ponto a ponto é mais fácil
+M:N = Pode ocorrer de duas formas diferentes, onde cada mensagem é recebida por apenas um receptor, somente ao que pedir primeiro, ou a mensagem é recebida por todos os receptores via implementação do protocolo UDP
+2 - síncrona = bloqueante
+assíncrona = não bloqueante
+Capacidade Nula (n = 0): O canal não pode armazenas dados, sua comunicação é feita por transferência direta das informações do emissor para o receptor, sem haver cópias intermediárias. Considerando o tipo dessa comunicação síncrona, o emissor permanece bloqueado até que o receptor receba todos os dados e vice-versa.
+Capacidade Infinita (n = ∞): O emissor sempre pode enviar dados, que serão armazenados no buffer do canal enquanto o receptor não os consumir. Essa situação na verdade não existe na prática, uma vez que todos os sistemas de computação têm capacidade de memória e de armazenamento finitas. No entanto, essa simplificação é útil no estudo dos algoritmos de comunicação e sincronização, pois torna menos complexas a modelagem e análise dos mesmos.
+Capacidade Finita (0 < n < ∞): Neste caso, uma quantidade finita (n) de dados pode ser enviada pelo emissor sem que o receptor os consuma. Todavia, ao tentar enviar dados em um canal já saturado, o emissor poderá ficar bloqueado até surgir espaço no buffer do canal e conseguir enviar (comportamento síncrono) ou receber um retorno indicando o erro (comportamento assíncrono). A maioria dos sistemas reais opera com canais de capacidade finita.
+
+3 – Letra C = Apenas I, II e IV
+III - Um mecanismo de comunicação bloqueante precisa ter um tempo pré-definido, caso o tempo se esgote uma mensagem de erro será exibida, sendo o tempo infinito acontecerá sempre esse mesmo tipo de erro.
+
+4 – Letra C = Apenas III, IV e V
+
+I – Ambos precisão esperar um pelo outro por um determinado prazo de tempo até que a comunicação seja finalizada.
+
+II – Em casos de o canal de comunicação ter a capacidade nula, obrigatoriamente a comunicação precisará ser síncrona ou bloqueante.
+
+5 – Letra A = Apenas II e III
+
+6 – Letra C = Apenas I e IV
+
+7 – 
+
+8) Letra D = apenas V
+I - O mailbox na verdade funciona como um buffer de dados, onde o emissor deposita as mensagens e os receptores as consomem, não sendo necessário enviar a mesma mensagem outra vez.
+II – Em um canal de eventos todos os receptores recebem uma cópia da mensagem e não um de cada vez.
+III – As filas de mensagens POSIX são exemplos de mailbox e não de um canal de evento.
+IV -  ?
